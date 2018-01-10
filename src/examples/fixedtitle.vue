@@ -1,0 +1,100 @@
+<template>
+  <div id="list">
+    <h3>这是一个<br>表头固定组件<br>和<br>页面置顶组建<br>的例子</h3>
+    <fixed-title :top="top">
+      <ul>
+        <li>
+          <p>name</p>
+          <p>sex</p>
+          <p>age</p>
+        </li>
+      </ul>
+    </fixed-title>
+    <ul>
+      <li id="listTitle">
+        <p>name</p>
+        <p>sex</p>
+        <p>age</p>
+      </li>
+      <li v-for="item in data">
+        <p>{{item.name}}</p>
+        <p>{{item.sex}}</p>
+        <p>{{item.age}}</p>
+      </li>
+    </ul>
+    <to-top :scrollTop="500"></to-top>
+  </div>
+</template>
+
+<script>
+import { FixedTitle, ToTop } from '@/components';
+
+export default {
+  name: 'fixedtitle',
+  data () {
+    return {
+      top: 0,
+      data: [
+        {name: 'Hanger', age: 23, sex: 'male'},
+        {name: 'Alex', age: 20, sex: 'female'},
+        {name: 'Hanger', age: 23, sex: 'male'},
+        {name: 'Alex', age: 20, sex: 'female'},
+        {name: 'Hanger', age: 23, sex: 'male'},
+        {name: 'Alex', age: 20, sex: 'female'},
+        {name: 'Hanger', age: 23, sex: 'male'},
+        {name: 'Alex', age: 20, sex: 'female'},
+        {name: 'Hanger', age: 23, sex: 'male'},
+        {name: 'Alex', age: 20, sex: 'female'},
+        {name: 'Hanger', age: 23, sex: 'male'},
+        {name: 'Alex', age: 20, sex: 'female'},
+        {name: 'Hanger', age: 23, sex: 'male'},
+        {name: 'Alex', age: 20, sex: 'female'},
+        {name: 'Hanger', age: 23, sex: 'male'},
+        {name: 'Alex', age: 20, sex: 'female'},
+        {name: 'Hanger', age: 23, sex: 'male'},
+        {name: 'Alex', age: 20, sex: 'female'},
+        {name: 'Hanger', age: 23, sex: 'male'},
+        {name: 'Alex', age: 20, sex: 'female'},
+        {name: 'Hanger', age: 23, sex: 'male'},
+        {name: 'Alex', age: 20, sex: 'female'},
+        {name: 'Hanger', age: 23, sex: 'male'},
+        {name: 'Alex', age: 20, sex: 'female'}
+      ]
+    };
+  },
+  components: {
+    FixedTitle,
+    ToTop
+  },
+  methods: {},
+  mounted () {
+    this.$nextTick(() => {
+      this.top = document.getElementById('listTitle').offsetTop;
+    });
+  }
+};
+</script>
+
+<style lang="scss" scoped>
+#list {
+  color: #2c3e50;
+  text-align: center;
+  h3 {
+    height:130px;
+  }
+  ul {
+    li {
+      display: flex;
+      border: 1px solid #f1f1f1;
+      p {
+        height: 70px;
+        line-height: 70px;
+        flex: 1;
+      }
+    }
+    li:first-child {
+      background-color: #f1f1f1;
+    }
+  }
+}
+</style>
