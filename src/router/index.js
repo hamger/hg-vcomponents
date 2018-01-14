@@ -5,6 +5,7 @@ import SlidDelete from '@/examples/slidDelete.vue';
 import Hint from '@/examples/hint.vue';
 import Loading from '@/examples/loading.vue';
 import FixedTitle from '@/examples/fixedtitle.vue';
+import Arrows from '@/examples/arrows.vue';
 
 Vue.use(Router);
 
@@ -34,6 +35,11 @@ export default new Router({
       path: '/fixedtitle',
       name: 'fixedtitle',
       component: FixedTitle
+    },
+    {
+      path: '/arrows',
+      name: 'arrows',
+      component: Arrows
     }
   ]
 });

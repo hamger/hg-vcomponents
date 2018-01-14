@@ -8,7 +8,7 @@
 import { Loading } from '@/components';
 
 export default {
-  name: 'hint',
+  name: 'el-loading',
   data () {
     return {
       data: {}

@@ -1,10 +1,13 @@
 <template>
   <div id="hg-to-top" @click="toTop" :style="{
+    height: height,
+    width: width,
+    'border-radius': borderRadius,
     bottom: bottom,
     right: right
   }">
     <slot>
-      <span></span>
+      <span class="hg-to-top-arrows"></span>
     </slot>  
   </div>
 </template>
@@ -31,6 +34,18 @@ export default {
     right: {
       type: String,
       default: '20px'
+    },
+    height: {
+      type: String,
+      default: '30px'
+    },
+    width: {
+      type: String,
+      default: '30px'
+    },
+    borderRadius: {
+      type: String,
+      default: '6px'
     }
   },
   methods: {
@@ -56,12 +71,9 @@ export default {
   #hg-to-top {
     display: none;
     position: fixed;
-    height: 30px;
-    width: 30px;
-    border-radius: 6px;
     background-color: rgba(70, 70, 70, 0.5);
     z-index: 99;
-    span {
+    .hg-to-top-arrows {
       display: inline-block;
       height: 12px;
       width: 12px;

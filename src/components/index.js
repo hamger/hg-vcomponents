@@ -3,11 +3,13 @@ import Hint from './Hint/hint.vue';
 import Loading from './Loading/loading.vue';
 import FixedTitle from './FixedTitle/fixed-title.vue';
 import ToTop from './ToTop/to-top.vue';
+import Arrows from './Arrows/arrows.vue';
 
 export {
   SlidDelete,
   Hint,
   Loading,
   FixedTitle,
-  ToTop
+  ToTop,
+  Arrows
 };

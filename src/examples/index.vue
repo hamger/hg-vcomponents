@@ -5,12 +5,13 @@
     <div class="tab"><router-link to="/loading">加载状态组件</router-link></div>
     <div class="tab"><router-link to="/fixedtitle">表头固定组件</router-link></div>
     <div class="tab"><router-link to="/fixedtitle">页面置顶组件</router-link></div>
+    <div class="tab"><router-link to="/arrows">箭头组件</router-link></div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'index',
+  name: 'el-index',
   data () {
     return {};
   }

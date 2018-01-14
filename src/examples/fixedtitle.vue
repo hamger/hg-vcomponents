@@ -30,7 +30,7 @@
 import { FixedTitle, ToTop } from '@/components';
 
 export default {
-  name: 'fixedtitle',
+  name: 'el-fixedtitle',
   data () {
     return {
       top: 0,

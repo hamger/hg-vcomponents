@@ -13,7 +13,7 @@
 import { Hint } from '@/components';
 
 export default {
-  name: 'hint',
+  name: 'el-hint',
   data () {
     return {
       data: {}

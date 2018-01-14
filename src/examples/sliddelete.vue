@@ -14,7 +14,7 @@
 import { SlidDelete } from '@/components';
 
 export default {
-  name: 'sliddelete',
+  name: 'el-sliddelete',
   data () {
     return {
       data: [{
