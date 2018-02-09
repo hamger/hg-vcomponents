@@ -25,6 +25,6 @@ npm install hg-vcomponents
 下载该项目，在文件根目录下依次输入命令行：
 ```
 npm install
-npm dev run
+npm run dev
 ```
 然后在浏览器里输入`http://localhost:8089`，即可看到组件 demo。
