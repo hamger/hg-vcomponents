@@ -29,7 +29,7 @@ export default {
       type: Number,
       default: 10
     },
-    borderSize: {
+    bdSize: {
       type: String,
       default: '1px'
     },
@@ -65,19 +65,19 @@ export default {
   computed: {
     borderLeft () {
       if (this.direction === 'right' || this.direction === 'top') return 0;
-      else return this.borderSize;
+      else return this.bdSize;
     },
     borderRight () {
       if (this.direction === 'left' || this.direction === 'bottom') return 0;
-      else return this.borderSize;
+      else return this.bdSize;
     },
     borderTop () {
       if (this.direction === 'right' || this.direction === 'bottom') return 0;
-      else return this.borderSize;
+      else return this.bdSize;
     },
     borderBottom () {
       if (this.direction === 'left' || this.direction === 'top') return 0;
-      else return this.borderSize;
+      else return this.bdSize;
     },
     wrapWidth () {
       if (this.direction === 'bottom' || this.direction === 'top') return this.size * 1.5;

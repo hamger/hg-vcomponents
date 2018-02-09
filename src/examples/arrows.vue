@@ -33,14 +33,14 @@
         :top="'50px'"
         :left="'250px'"
         :direction="'top'"
-        :borderSize="'2px'"
+        :bdSize="'2px'"
         :color="'#b0d433'"
       ></arrows>
       <arrows :size="18"
         :top="'150px'"
         :left="'250px'"
         :direction="'left'"
-        :borderSize="'2px'"
+        :bdSize="'2px'"
       ></arrows>
       <arrows :size="18"
         :top="'250px'"

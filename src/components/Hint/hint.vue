@@ -3,7 +3,9 @@
     height: height + 'px',
     width: width + 'px',
     'margin-top': -1 * height/2 + 'px',
-    'margin-left': -1 * width/2 + 'px'
+    'margin-left': -1 * width/2 + 'px',
+    'border-radius': radius,
+    'background-color': bgColor
   }">
     <slot>
       <div class="hg-hint-content">
@@ -31,6 +33,14 @@ export default {
     width: {
       type: Number,
       default: 140
+    },
+    bgColor: {
+      type: String,
+      default: 'rgba(70, 70, 70, 0.5)'
+    },
+    radius: {
+      type: String,
+      default: '6px'
     }
   }
 };
@@ -41,9 +51,7 @@ export default {
   position: absolute;
   top: 50%;
   left: 50%;
-  z-index: 99;
-  background: rgba(70, 70, 70, 0.5);
-  border-radius: 6px;
+  z-index: 10000000;
   text-align: center;
   .hg-hint-content {
     position: absolute;

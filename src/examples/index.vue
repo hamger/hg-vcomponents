@@ -6,6 +6,8 @@
     <div class="tab"><router-link to="/fixedtitle">表头固定组件</router-link></div>
     <div class="tab"><router-link to="/fixedtitle">页面置顶组件</router-link></div>
     <div class="tab"><router-link to="/arrows">箭头组件</router-link></div>
+    <div class="tab"><router-link to="/round">圆形组件</router-link></div>
+    <div class="tab"><router-link to="/progressbar">进度条组件</router-link></div>
   </div>
 </template>
 

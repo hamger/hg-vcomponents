@@ -1,14 +1,39 @@
 <template>
   <div class="hg-loading-wrapper">
-    <div class="hg-cssload-container">
-      <div class="hg-cssload-speeding-wheel"></div>
+    <div class="hg-cssload-container" 
+      :style="{
+        height: diam + size * 2 + 'px'
+      }">
+      <div class="hg-cssload-speeding-wheel"
+        :style="{
+          width: `${diam}px`,
+          height: `${diam}px`,
+          border: `${size}px solid ${color}`,
+          'border-left-color': 'transparent',
+          'border-right-color': 'transparent'
+        }"
+      ></div>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'loading'
+  name: 'loading',
+  props: {
+    color: {
+      type: String,
+      default: '#2a8ee3'
+    },
+    diam: {
+      type: Number,
+      default: 50
+    },
+    size: {
+      type: Number,
+      default: 3
+    }
+  }
 };
 </script>
 
@@ -30,19 +55,13 @@ export default {
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 49px;
   margin: auto;
   text-align: center;
 }
 
 .hg-cssload-speeding-wheel {
-  width: 49px;
-  height: 49px;
   margin: 0 auto;
-  border: 3px solid #2a8ee3;
   border-radius: 50%;
-  border-left-color: transparent;
-  border-right-color: transparent;
   animation: cssload-spin 575ms infinite linear;
 }
 

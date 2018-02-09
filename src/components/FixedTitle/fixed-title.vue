@@ -18,11 +18,8 @@ export default {
     window.addEventListener('scroll', (e) => {
       // 兼容各浏览器，获取屏幕scrollTop
       let scrollTop = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
-      if (scrollTop > this.top) {
-        fixedTitle.style.display = 'block';
-      } else {
-        fixedTitle.style.display = 'none';
-      }
+      if (scrollTop > this.top) fixedTitle.style.display = 'block';
+      else fixedTitle.style.display = 'none';
     });
   }
 };

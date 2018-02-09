@@ -1,11 +1,11 @@
 <template>
   <div id="sliddelete">
-    <v-hint>
+    <hint>
       <!-- <div class="content">
         <img src="/static/success.png" width="40" height="40">
         <p>修改成功</p>
       </div> -->
-    </v-hint>
+    </hint>
   </div>
 </template>
 
@@ -20,7 +20,7 @@ export default {
     };
   },
   components: {
-    'v-hint': Hint
+    Hint
   }
 };
 </script>

@@ -1,11 +1,13 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import Index from '@/examples/index.vue';
-import SlidDelete from '@/examples/slidDelete.vue';
-import Hint from '@/examples/hint.vue';
-import Loading from '@/examples/loading.vue';
-import FixedTitle from '@/examples/fixedtitle.vue';
-import Arrows from '@/examples/arrows.vue';
+const Index = () => import('@/examples/index.vue');
+const SlidDelete = () => import('@/examples/sliddelete.vue');
+const Hint = () => import('@/examples/hint.vue');
+const Loading = () => import('@/examples/loading.vue');
+const FixedTitle = () => import('@/examples/fixedtitle.vue');
+const Arrows = () => import('@/examples/arrows.vue');
+const ProgressBar = () => import('@/examples/progressbar.vue');
+const Round = () => import('@/examples/round.vue');
 
 Vue.use(Router);
 
@@ -17,8 +19,8 @@ export default new Router({
       component: Index
     },
     {
-      path: '/slidDelete',
-      name: 'slidDelete',
+      path: '/sliddelete',
+      name: 'sliddelete',
       component: SlidDelete
     },
     {
@@ -40,6 +42,16 @@ export default new Router({
       path: '/arrows',
       name: 'arrows',
       component: Arrows
+    },
+    {
+      path: '/progressbar',
+      name: 'progressbar',
+      component: ProgressBar
+    },
+    {
+      path: '/round',
+      name: 'round',
+      component: Round
     }
   ]
 });
