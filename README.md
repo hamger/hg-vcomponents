@@ -19,6 +19,8 @@ npm install hg-vcomponents
 
 [Arrows 箭头组件](./src/components/Arrows)
 
+[Round 圆形组件](./src/components/Round)
+
 [ProgressBar 进度条组件](./src/components/ProgressBar)
 
 ## Demo
