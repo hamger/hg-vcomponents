@@ -37,5 +37,5 @@ top | String | 规定箭头上距离，默认`0px`，设置`bottom`会取消`top
 left | String | 规定箭头左距离，默认`0px`，设置`right`会取消`left`设置
 bottom | String | 规定箭头下距离，默认`undefined`
 right | String | 规定箭头右距离，默认`undefined`
-direction | `left`\|`top`\|`right`\|`bottom` | 规定箭头指向，默认`left`
-type | `hollow`\|`solid` | 规定箭头实心或空心，默认`hollow`(空心)
+direction | `left|top|right|bottom` | 规定箭头指向，默认`left`
+type | `hollow|solid` | 规定箭头实心或空心，默认`hollow`(空心)
