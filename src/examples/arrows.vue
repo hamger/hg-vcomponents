@@ -1,65 +1,76 @@
 <template>
   <div>
     <div class="el-arrows">
-      <div>这是一个箭头组件</div>
-      <arrows :size="18"
-        :top="'50px'"
-        :left="'100px'"
-        :direction="'top'"
-        :type="'solid'"
-        :color="'pink'"
-      ></arrows>
-      <arrows :size="28"
-        :top="'150px'"
-        :left="'100px'"
-        :direction="'left'"
-        :type="'solid'"
-        :color="'green'"
-      ></arrows>
-      <arrows :size="22"
-        :top="'250px'"
-        :left="'100px'"
-        :direction="'right'"
-        :type="'solid'"
-      ></arrows>
-      <arrows :size="18"
-        :top="'350px'"
-        :left="'100px'"
-        :direction="'bottom'"
-        :type="'solid'"
-        :color="'#27f7de'"
-      ></arrows>
-      <arrows :size="18"
-        :top="'50px'"
-        :left="'250px'"
-        :direction="'top'"
-        :bdSize="'2px'"
-        :color="'#b0d433'"
-      ></arrows>
-      <arrows :size="18"
-        :top="'150px'"
-        :left="'250px'"
-        :direction="'left'"
-        :bdSize="'2px'"
-      ></arrows>
-      <arrows :size="18"
-        :top="'250px'"
-        :left="'250px'"
-        :direction="'right'"
-        :color="'#0a02dc'"
-      ></arrows>
-      <arrows :size="18"
-        :top="'350px'"
-        :left="'250px'"
-        :direction="'bottom'"
-        :color="'#e64949'"
-      ></arrows>
+      <div>
+        <h4>空心箭头组件</h4>
+        <hollow-arrow
+          :top="'90px'"
+          :left="'90px'">
+        </hollow-arrow>
+        <hollow-arrow
+          :top="'190px'"
+          :left="'90px'"
+          :direction="'top'"
+          :color="'#fff100'"
+          :size="'20px'"
+          :bdSize="'3px'"
+          >
+        </hollow-arrow>
+        <hollow-arrow
+          :top="'290px'"
+          :left="'90px'"
+          :direction="'bottom'"
+          :color="'blue'"
+          :size="'15px'"
+          >
+        </hollow-arrow>
+        <hollow-arrow
+          :top="'390px'"
+          :left="'90px'"
+          :direction="'left'"
+          :color="'pink'"
+          :size="'18px'"
+          :bdSize="'4px'"
+          >
+        </hollow-arrow>
+      </div>
+      <div>
+        <h4>实心箭头组件</h4>
+        <solid-arrow
+          :top="'90px'"
+          :left="'90px'">
+        </solid-arrow>
+        <solid-arrow
+          :top="'190px'"
+          :left="'90px'"
+          :direction="'top'"
+          :color="'red'"
+          :size="'10px'"
+          >
+        </solid-arrow>
+        <solid-arrow
+          :top="'290px'"
+          :left="'90px'"
+          :direction="'bottom'"
+          :color="'#5ccf57'"
+          :size="'15px'"
+          >
+        </solid-arrow>
+        <solid-arrow
+          :top="'390px'"
+          :left="'90px'"
+          :direction="'left'"
+          :color="'#ea64ff'"
+          :size="'12px'"
+          >
+        </solid-arrow>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-import { Arrows } from '@/components';
+import { HollowArrow, SolidArrow } from '@/components';
 
 export default {
   name: 'el-arrows',
@@ -67,7 +78,8 @@ export default {
     return {};
   },
   components: {
-    Arrows
+    HollowArrow,
+    SolidArrow
   }
 };
 </script>
@@ -75,8 +87,15 @@ export default {
 <style lang="scss" scoped>
   .el-arrows {
     margin-top: 20px;
-    height: 600px;
     text-align: center;
-    position: relative;
+    display: flex;
+    & > div {
+      flex: 1;
+      height: 500px;
+      position: relative;
+    }
+    & > div:first-child {
+      border-right: 1px solid #ccc;
+    }
   }
 </style>
