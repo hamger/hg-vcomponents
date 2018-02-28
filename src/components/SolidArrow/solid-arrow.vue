@@ -4,8 +4,8 @@
       'border-left': `${size} solid ${leftBdColor}`,
       'border-bottom': `${size} solid ${bottomBdColor}`,
       'border-right': `${size} solid ${rightBdColor}`,
-      top: bottom ? undefined : top,
-      left: right ? undefined : left,
+      top: (bottom || bottom === 0)? undefined : top,
+      left: (right || right === 0) ? undefined : left,
       right: right,
       bottom: bottom
     }"></div>

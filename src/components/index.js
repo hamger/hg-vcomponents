@@ -7,6 +7,7 @@ import HollowArrow from './HollowArrow/hollow-arrow.vue';
 import SolidArrow from './SolidArrow/solid-arrow.vue';
 import ProgressBar from './ProgressBar/progress-bar.vue';
 import Round from './Round/round.vue';
+import OmitText from './OmitText/omit-text.vue';
 
 export {
   SlidDelete,
@@ -14,8 +15,9 @@ export {
   Loading,
   FixedTitle,
   ToTop,
+  HollowArrow,
+  SolidArrow,
   ProgressBar,
   Round,
-  HollowArrow,
-  SolidArrow
+  OmitText
 };

@@ -8,6 +8,7 @@
     <div class="tab"><router-link to="/arrows">箭头组件</router-link></div>
     <div class="tab"><router-link to="/round">圆形组件</router-link></div>
     <div class="tab"><router-link to="/progressbar">进度条组件</router-link></div>
+    <div class="tab"><router-link to="/omittext">文本省略组件</router-link></div>
   </div>
 </template>
 

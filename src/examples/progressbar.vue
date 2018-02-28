@@ -1,5 +1,6 @@
 <template>
   <div class="wrap">
+    <h4>进度条组件</h4>
     <div class="box">
       <progress-bar></progress-bar>
     </div>
@@ -30,7 +31,11 @@ export default {
 
 <style lang="scss" scoped>
 .wrap {
-  padding: 30px 15px;
+  h4 {
+    text-align: center;
+    padding: 20px 0;
+  }
+  padding: 0 15px;
   .box {
     padding:20px 0;
   }

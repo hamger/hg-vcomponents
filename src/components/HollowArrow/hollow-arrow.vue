@@ -6,8 +6,8 @@
       'border-left': `${leftBdSize} solid ${color}`,
       'border-bottom': `${bottomBdSize} solid ${color}`,
       'border-right': `${rightBdSize} solid ${color}`,
-      top: bottom ? undefined : top,
-      left: right ? undefined : left,
+      top: (bottom || bottom === 0) ? undefined : top,
+      left: (right || right === 0) ? undefined : left,
       right: right,
       bottom: bottom
     }"></div>

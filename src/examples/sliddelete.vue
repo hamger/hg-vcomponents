@@ -1,5 +1,6 @@
 <template>
   <div>
+    <h4 class="title">滑动删除组件</h4>
     <ul class="silddelete">
       <li v-for="item in data" v-if="item.show">
         <slid-delete :height="'50px'" :delWidth="60" @deteleClicked="delCelue(item)">
@@ -44,11 +45,15 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+h4.title {
+  text-align: center;
+  padding: 20px 0;
+}
 .silddelete {
   line-height: 50px;
   color: #2c3e50;
   text-align: center;
-  li {  
+  li {
     div {
       background-color: #F2F2F2;
       border-bottom: 1px solid #b2d2f1;

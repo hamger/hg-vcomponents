@@ -8,6 +8,7 @@ const FixedTitle = () => import('@/examples/fixedtitle.vue');
 const Arrows = () => import('@/examples/arrows.vue');
 const ProgressBar = () => import('@/examples/progressbar.vue');
 const Round = () => import('@/examples/round.vue');
+const OmitText = () => import('@/examples/omittext.vue');
 
 Vue.use(Router);
 
@@ -52,6 +53,11 @@ export default new Router({
       path: '/round',
       name: 'round',
       component: Round
+    },
+    {
+      path: '/omittext',
+      name: 'omittext',
+      component: OmitText
     }
   ]
 });

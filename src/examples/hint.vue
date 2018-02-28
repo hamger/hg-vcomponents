@@ -1,5 +1,6 @@
 <template>
-  <div id="sliddelete">
+  <div class="wrap">
+    <h4>透明提示组件</h4>
     <hint>
       <!-- <div class="content">
         <img src="/static/success.png" width="40" height="40">
@@ -26,11 +27,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .content {
-    padding: 16px 0;
-    color: #fff;
-    img {
-      padding-bottom: 10px;
-    }
+.wrap {
+  h4 {
+    text-align: center;
+    padding: 20px 0;
   }
+  padding:0 15px;
+}
 </style>

@@ -1,6 +1,6 @@
 <template>
   <div id="list">
-    <h3>这是一个<br>表头固定组件<br>和<br>页面置顶组建<br>的例子</h3>
+    <h4>表头固定组件<br>页面置顶组件<br></h4>
     <fixed-title :top="top">
       <ul>
         <li>
@@ -79,8 +79,9 @@ export default {
 #list {
   color: #2c3e50;
   text-align: center;
-  h3 {
-    height:130px;
+  h4 {
+    text-align: center;
+    padding: 20px 0;
   }
   ul {
     li {
