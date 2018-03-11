@@ -1,13 +1,13 @@
 <template>
   <div class="hg-round" :style="{
-    height: size,
-    width: size,
-    'background-color': bgColor,
-    border: `${bdSize} ${bdType} ${bdColor}`,
-    top: bottom ? undefined : top,
-    left: right ? undefined : left,
-    right: right,
-    bottom: bottom
+    height: getStyle(size),
+    width: getStyle(size),
+    'background-color': getStyle(bgColor),
+    border: `${getStyle(bdSize)} solid ${getStyle(bdColor)}`,
+    top: bottom ? undefined : getStyle(top),
+    left: right ? undefined : getStyle(left),
+    right: getStyle(right),
+    bottom: getStyle(bottom)
   }">
   </div>
 </template>
@@ -32,10 +32,6 @@ export default {
       type: String,
       default: '1px'
     },
-    bdType: {
-      type: String,
-      default: 'solid'
-    },
     top: {
       type: String,
       default: '0px'
@@ -51,6 +47,17 @@ export default {
     bottom: {
       type: String,
       default: undefined
+    },
+    active: {
+      type: Boolean,
+      default: false
+    }
+  },
+  methods: {
+    getStyle (str) {
+      if (!str) return str
+      if (this.active) return str.split('@')[1] || str.split('@')[0]
+      else return str.split('@')[0]
     }
   }
 };
