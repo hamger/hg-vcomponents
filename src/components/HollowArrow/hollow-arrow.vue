@@ -1,15 +1,15 @@
 <template>
     <div class="hollow-arrow" :style="{
-      height: size,
-      width: size,
-      'border-top': `${topBdSize} solid ${color}`,
-      'border-left': `${leftBdSize} solid ${color}`,
-      'border-bottom': `${bottomBdSize} solid ${color}`,
-      'border-right': `${rightBdSize} solid ${color}`,
-      top: (bottom || bottom === 0) ? undefined : top,
-      left: (right || right === 0) ? undefined : left,
-      right: right,
-      bottom: bottom
+      height: getStyle(size),
+      width: getStyle(size),
+      'border-top': `${topBdSize} solid ${getStyle(color)}`,
+      'border-left': `${leftBdSize} solid ${getStyle(color)}`,
+      'border-bottom': `${bottomBdSize} solid ${getStyle(color)}`,
+      'border-right': `${rightBdSize} solid ${getStyle(color)}`,
+      top: bottom ? undefined : getStyle(top),
+      left: right ? undefined : getStyle(left),
+      right: getStyle(right),
+      bottom: getStyle(bottom)
     }"></div>
 </template>
 
@@ -48,24 +48,35 @@ export default {
     direction: {
       type: String,
       default: 'right'
+    },
+    active: {
+      type: Boolean,
+      default: false
     }
   },
   computed: {
     leftBdSize () {
       if (this.direction === 'right' || this.direction === 'top') return 0;
-      else return this.bdSize;
+      else return this.getStyle(this.bdSize);
     },
     rightBdSize () {
       if (this.direction === 'left' || this.direction === 'bottom') return 0;
-      else return this.bdSize;
+      else return this.getStyle(this.bdSize);
     },
     topBdSize () {
       if (this.direction === 'right' || this.direction === 'bottom') return 0;
-      else return this.bdSize;
+      else return this.getStyle(this.bdSize);
     },
     bottomBdSize () {
       if (this.direction === 'left' || this.direction === 'top') return 0;
-      else return this.bdSize;
+      else return this.getStyle(this.bdSize);
+    }
+  },
+  methods: {
+    getStyle (str) {
+      if (!str) return str
+      if (this.active) return str.split('@')[1] || str.split('@')[0]
+      else return str.split('@')[0]
     }
   }
 };

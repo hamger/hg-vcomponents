@@ -6,11 +6,13 @@
 <template>
   <div>
     <solid-arrow
-      :top="'190px'"
-      :left="'90px'"
-      :direction="'top'"
-      :color="'red'"
-      :size="'10px'"
+      @click.native="active2 = !active2"
+      :active="active2"
+      :top="'390px@380px'"
+      :left="'90px@70px'"
+      :direction="'left'"
+      :color="'#ea64ff@#ff607c'"
+      :size="'12px@24px'"
       >
     </solid-arrow>
   </div>
@@ -38,3 +40,4 @@ top | String | 规定箭头上距离，默认`0px`，设置`bottom`会取消`top
 left | String | 规定箭头左距离，默认`0px`，设置`right`会取消`left`设置
 bottom | String | 规定箭头下距离，默认`undefined`
 right | String | 规定箭头右距离，默认`undefined`
+active | Boolean | 规定箭头组件是否处于激活状态，若处于激活状态，会渲染`@`后的样式（若`@`后没有内容，则不改变样式），默认`false`

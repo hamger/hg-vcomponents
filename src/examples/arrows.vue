@@ -25,12 +25,14 @@
           >
         </hollow-arrow>
         <hollow-arrow
-          :top="'390px'"
-          :left="'90px'"
+          @click.native="active = !active"
+          :active="active"
+          :top="'390px@380px'"
+          :left="'90px@80px'"
           :direction="'left'"
-          :color="'pink'"
-          :size="'18px'"
-          :bdSize="'4px'"
+          :color="'pink@#ff607c'"
+          :size="'18px@36px'"
+          :bdSize="'4px@8px'"
           >
         </hollow-arrow>
       </div>
@@ -57,11 +59,13 @@
           >
         </solid-arrow>
         <solid-arrow
-          :top="'390px'"
-          :left="'90px'"
+          @click.native="active2 = !active2"
+          :active="active2"
+          :top="'390px@380px'"
+          :left="'90px@70px'"
           :direction="'left'"
-          :color="'#ea64ff'"
-          :size="'12px'"
+          :color="'#ea64ff@#ff607c'"
+          :size="'12px@24px'"
           >
         </solid-arrow>
       </div>
@@ -75,7 +79,10 @@ import { HollowArrow, SolidArrow } from '@/components';
 export default {
   name: 'el-arrows',
   data () {
-    return {};
+    return {
+      active: false,
+      active2: false
+    };
   },
   components: {
     HollowArrow,

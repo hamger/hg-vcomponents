@@ -1,13 +1,13 @@
 <template>
     <div class="solid-arrow" :style="{
-      'border-top': `${size} solid ${topBdColor}`,
-      'border-left': `${size} solid ${leftBdColor}`,
-      'border-bottom': `${size} solid ${bottomBdColor}`,
-      'border-right': `${size} solid ${rightBdColor}`,
-      top: (bottom || bottom === 0)? undefined : top,
-      left: (right || right === 0) ? undefined : left,
-      right: right,
-      bottom: bottom
+      'border-top': `${getStyle(size)} solid ${topBdColor}`,
+      'border-left': `${getStyle(size)} solid ${leftBdColor}`,
+      'border-bottom': `${getStyle(size)} solid ${bottomBdColor}`,
+      'border-right': `${getStyle(size)} solid ${rightBdColor}`,
+      top: bottom ? undefined : getStyle(top),
+      left: right ? undefined : getStyle(left),
+      right: getStyle(right),
+      bottom: getStyle(bottom)
     }"></div>
 </template>
 
@@ -42,24 +42,35 @@ export default {
     direction: {
       type: String,
       default: 'right'
+    },
+    active: {
+      type: Boolean,
+      default: false
     }
   },
   computed: {
     leftBdColor () {
-      if (this.direction === 'right') return this.color;
+      if (this.direction === 'right') return this.getStyle(this.color);
       else return 'transparent';
     },
     rightBdColor () {
-      if (this.direction === 'left') return this.color;
+      if (this.direction === 'left') return this.getStyle(this.color);
       else return 'transparent';
     },
     topBdColor () {
-      if (this.direction === 'bottom') return this.color;
+      if (this.direction === 'bottom') return this.getStyle(this.color);
       else return 'transparent';
     },
     bottomBdColor () {
-      if (this.direction === 'top') return this.color;
+      if (this.direction === 'top') return this.getStyle(this.color);
       else return 'transparent';
+    }
+  },
+  methods: {
+    getStyle (str) {
+      if (!str) return str
+      if (this.active) return str.split('@')[1] || str.split('@')[0]
+      else return str.split('@')[0]
     }
   }
 };
