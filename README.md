@@ -33,6 +33,8 @@ import { Loading, SolidArrow... } from 'hg-vcomponents';
 
 [OmitText 文本省略组件](./src/components/OmitText)
 
+[Banner 横幅组件](./src/components/Banner)
+
 ## Demo
 下载该项目，在文件根目录下依次输入命令行：
 ```
@@ -42,6 +44,9 @@ npm run dev
 然后在浏览器里输入`http://localhost:8089`，即可看到组件 demo。
 
 ## Changelog
+### 2018.3.26
+> v0.1.1 * 添加横幅组件
+
 ### 2018.3.11
 > v0.1.0 * 添加圆形组件、空心箭头和实心箭头组件的激活状态
 

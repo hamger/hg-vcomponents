@@ -8,6 +8,7 @@ import SolidArrow from './SolidArrow/solid-arrow.vue';
 import ProgressBar from './ProgressBar/progress-bar.vue';
 import Round from './Round/round.vue';
 import OmitText from './OmitText/omit-text.vue';
+import Banner from './Banner/banner.vue';
 
 export {
   SlidDelete,
@@ -19,5 +20,6 @@ export {
   SolidArrow,
   ProgressBar,
   Round,
-  OmitText
+  OmitText,
+  Banner
 };

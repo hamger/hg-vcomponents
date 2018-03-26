@@ -9,6 +9,7 @@ const Arrows = () => import('@/examples/arrows.vue');
 const ProgressBar = () => import('@/examples/progressbar.vue');
 const Round = () => import('@/examples/round.vue');
 const OmitText = () => import('@/examples/omittext.vue');
+const Banner = () => import('@/examples/banner.vue');
 
 Vue.use(Router);
 
@@ -58,6 +59,11 @@ export default new Router({
       path: '/omittext',
       name: 'omittext',
       component: OmitText
+    },
+    {
+      path: '/banner',
+      name: 'banner',
+      component: Banner
     }
   ]
 });
