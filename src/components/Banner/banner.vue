@@ -1,5 +1,5 @@
 <template>
-    <div class="view" :style="{height: height}">
+    <div class="view">
       <div ref="wrap" class="wrap"
         @touchstart="_touchstart"
         @touchmove="_touchmove"
@@ -20,10 +20,6 @@
 export default {
   name: 'banner',
   props: {
-    height: {
-      type: String,
-      default: '140px'
-    },
     showPoint: {
       type: Boolean,
       default: true
@@ -38,8 +34,6 @@ export default {
       itemAmount: 0,
       itemIndex: 0
     };
-  },
-  computed: {
   },
   methods: {
     _touchstart (e) {
@@ -74,14 +68,11 @@ export default {
     overflow: hidden;
     font-size: 0;
     .wrap {
-      white-space:nowrap;
-      width:auto;
-      height: 100%;
+      white-space: nowrap;
+      width: auto;
       transition: transform 0.2s ease-out;
       & > div {
-        display:inline-block;
-        width: 100%;
-        height: 100%;
+        display: inline-block;
       }
     }
     .point {
