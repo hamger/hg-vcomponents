@@ -1,11 +1,11 @@
 <template>
   <div class="hg-progress-bar-wrap" :style="{
-    height: height,
     width: width,
     'background-color': unfinishColor,
     'border-radius': radius
   }">
     <div class="hg-progress-bar-inner" :style="{
+      height: height,
       width: finishWidth,
       'background-color': finishColor
     }"></div>
@@ -47,10 +47,5 @@ export default {
 <style lang="scss" rel="stylesheet/scss" scoped>
 .hg-progress-bar-wrap {
   overflow: hidden;
-  background-color: #fff;
-  display: inline-block;
-  .hg-progress-bar-inner {
-    height: 100%;
-  }
 }
 </style>
