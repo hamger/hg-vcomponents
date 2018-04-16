@@ -12,7 +12,8 @@
 </template>
 
 <script>
-import { SlidDelete } from '@/components';
+// import { SlidDelete } from '@/components';
+import { SlidDelete } from 'hg-vcomponents';
 
 export default {
   name: 'el-sliddelete',

@@ -11,7 +11,8 @@
 </template>
 
 <script>
-import { Hint } from '@/components';
+// import { Hint } from '@/components';
+import { Hint } from 'hg-vcomponents';
 
 export default {
   name: 'el-hint',

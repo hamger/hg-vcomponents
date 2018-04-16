@@ -74,7 +74,8 @@
 </template>
 
 <script>
-import { HollowArrow, SolidArrow } from '@/components';
+// import { HollowArrow, SolidArrow } from '@/components';
+import { HollowArrow, SolidArrow } from 'hg-vcomponents';
 
 export default {
   name: 'el-arrows',

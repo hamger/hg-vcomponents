@@ -11,6 +11,7 @@
 
 <script>
 import { Banner } from '@/components';
+// import { Banner } from 'hg-vcomponents';
 
 export default {
   name: 'el-banner',

@@ -27,7 +27,8 @@
 </template>
 
 <script>
-import { FixedTitle, ToTop } from '@/components';
+// import { FixedTitle, ToTop } from '@/components';
+import { FixedTitle, ToTop } from 'hg-vcomponents';
 
 export default {
   name: 'el-fixedtitle',

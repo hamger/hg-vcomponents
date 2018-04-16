@@ -47,7 +47,8 @@
 </template>
 
 <script>
-import { Round } from '@/components';
+// import { Round } from '@/components';
+import { Round } from 'hg-vcomponents';
 
 export default {
   name: 'el-round',

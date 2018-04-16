@@ -6,7 +6,8 @@
 </template>
 
 <script>
-import { OmitText } from '@/components';
+// import { OmitText } from '@/components';
+import { OmitText } from 'hg-vcomponents';
 
 export default {
   name: 'el-omit-text',
