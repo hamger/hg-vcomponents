@@ -3,11 +3,7 @@
     height: getStyle(size),
     width: getStyle(size),
     'background-color': getStyle(bgColor),
-    border: `${getStyle(bdSize)} solid ${getStyle(bdColor)}`,
-    top: bottom ? undefined : getStyle(top),
-    left: right ? undefined : getStyle(left),
-    right: getStyle(right),
-    bottom: getStyle(bottom)
+    border: `${getStyle(bdSize)} solid ${getStyle(bdColor)}`
   }">
   </div>
 </template>
@@ -20,6 +16,10 @@ export default {
       type: String,
       default: '20px'
     },
+    bdSize: {
+      type: String,
+      default: '1px'
+    },
     bgColor: {
       type: String,
       default: '#2a8ee3'
@@ -27,26 +27,6 @@ export default {
     bdColor: {
       type: String,
       default: '#2a8ee3'
-    },
-    bdSize: {
-      type: String,
-      default: '1px'
-    },
-    top: {
-      type: String,
-      default: '0px'
-    },
-    left: {
-      type: String,
-      default: '0px'
-    },
-    right: {
-      type: String,
-      default: undefined
-    },
-    bottom: {
-      type: String,
-      default: undefined
     },
     active: {
       type: Boolean,
@@ -65,7 +45,7 @@ export default {
 
 <style lang="scss" rel="stylesheet/scss" scoped>
 .hg-round {
-  position: absolute;
+  background-clip: padding-box;
   border-radius: 50%;
 }
 </style>

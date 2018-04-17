@@ -5,11 +5,7 @@
       'border-top': `${topBdSize} solid ${getStyle(color)}`,
       'border-left': `${leftBdSize} solid ${getStyle(color)}`,
       'border-bottom': `${bottomBdSize} solid ${getStyle(color)}`,
-      'border-right': `${rightBdSize} solid ${getStyle(color)}`,
-      top: bottom ? undefined : getStyle(top),
-      left: right ? undefined : getStyle(left),
-      right: getStyle(right),
-      bottom: getStyle(bottom)
+      'border-right': `${rightBdSize} solid ${getStyle(color)}`
     }"></div>
 </template>
 
@@ -28,22 +24,6 @@ export default {
     color: {
       type: String,
       default: '#666'
-    },
-    top: {
-      type: String,
-      default: '0px'
-    },
-    left: {
-      type: String,
-      default: '0px'
-    },
-    right: {
-      type: String,
-      default: undefined
-    },
-    bottom: {
-      type: String,
-      default: undefined
     },
     direction: {
       type: String,
@@ -84,7 +64,6 @@ export default {
 
 <style lang="scss" rel="stylesheet/scss"  scoped>
   .hollow-arrow {
-    position: absolute;
     background-color:  transparent;
     transform: rotate(-45deg);
   }

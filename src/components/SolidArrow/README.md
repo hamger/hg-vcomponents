@@ -1,5 +1,5 @@
 ## Introduce
-实心箭头组件用于绘制页面中实心的小箭头，本身采用绝对定位，所以需要规定外部参照系。
+实心箭头组件用于绘制页面中实心的小箭头。
 
 ## Usage
 ```
@@ -36,8 +36,4 @@ export default {
 size | String | 规定箭头大小，默认`8px`
 color | String | 规定箭头颜色，默认`#666`
 direction | `left` `top` `right` `bottom` | 规定箭头指向，默认`right`
-top | String | 规定箭头上距离，默认`0px`，设置`bottom`会取消`top`设置
-left | String | 规定箭头左距离，默认`0px`，设置`right`会取消`left`设置
-bottom | String | 规定箭头下距离，默认`undefined`
-right | String | 规定箭头右距离，默认`undefined`
 active | Boolean | 规定箭头组件是否处于激活状态，若处于激活状态，会渲染`@`后的样式（若`@`后没有内容，则不改变样式），默认`false`

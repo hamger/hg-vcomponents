@@ -3,11 +3,7 @@
       'border-top': `${getStyle(size)} solid ${topBdColor}`,
       'border-left': `${getStyle(size)} solid ${leftBdColor}`,
       'border-bottom': `${getStyle(size)} solid ${bottomBdColor}`,
-      'border-right': `${getStyle(size)} solid ${rightBdColor}`,
-      top: bottom ? undefined : getStyle(top),
-      left: right ? undefined : getStyle(left),
-      right: getStyle(right),
-      bottom: getStyle(bottom)
+      'border-right': `${getStyle(size)} solid ${rightBdColor}`
     }"></div>
 </template>
 
@@ -22,22 +18,6 @@ export default {
     color: {
       type: String,
       default: '#666'
-    },
-    top: {
-      type: String,
-      default: '0px'
-    },
-    left: {
-      type: String,
-      default: '0px'
-    },
-    right: {
-      type: String,
-      default: undefined
-    },
-    bottom: {
-      type: String,
-      default: undefined
     },
     direction: {
       type: String,
@@ -80,6 +60,5 @@ export default {
   .solid-arrow {
     width: 0;
     height: 0;
-    position: absolute;
   }
 </style>
