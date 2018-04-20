@@ -11,7 +11,11 @@
     </div>
     <div class="delete" :style="{
       width: delWidth + 'px'
-    }" @click="_delete"><span>删除</span></div>
+    }" @click="_delete">
+      <slot name="delete">
+        <span>删除</span>
+      </slot>  
+    </div>
   </div>
 </template>
 

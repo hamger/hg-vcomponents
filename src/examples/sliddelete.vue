@@ -5,6 +5,7 @@
       <li v-for="item in data" v-if="item.show">
         <slid-delete :height="'50px'" :delWidth="60" @deteleClicked="delCelue(item)">
           <div>{{item.content}}</div>
+          <!-- <span slot="delete">del</span> -->
         </slid-delete>
       </li>
     </ul>
@@ -12,8 +13,8 @@
 </template>
 
 <script>
-// import { SlidDelete } from '@/components';
-import { SlidDelete } from 'hg-vcomponents';
+import { SlidDelete } from '@/components';
+// import { SlidDelete } from 'hg-vcomponents';
 
 export default {
   name: 'el-sliddelete',
