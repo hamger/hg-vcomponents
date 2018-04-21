@@ -29,3 +29,4 @@ export default {
 height | String | 元素高度
 delWidth | Number | 删除按钮宽度
 deteleClicked | Function | 点击删除后回调
+`<slot name="delete-btn"></slot>` | HTML | `delete-btn`具名插槽规定删除按钮的样式，选填

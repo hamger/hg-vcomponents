@@ -2,10 +2,12 @@
   <div>
     <h4 class="title">滑动删除组件</h4>
     <ul class="silddelete">
-      <li v-for="item in data" v-if="item.show">
+      <li class="silddelete-li" v-for="item in data" v-if="item.show">
         <slid-delete :height="'50px'" :delWidth="60" @deteleClicked="delCelue(item)">
-          <div>{{item.content}}</div>
-          <!-- <span slot="delete">del</span> -->
+          <div class="silddelete-content">{{item.content}}</div>
+          <div class="topic" slot="delete-btn">
+            <img src="http://olislpb6q.bkt.clouddn.com/hg-head.png">
+          </div>
         </slid-delete>
       </li>
     </ul>
@@ -55,11 +57,21 @@ h4.title {
   line-height: 50px;
   color: #2c3e50;
   text-align: center;
-  li {
-    div {
+  .silddelete-li {
+    .silddelete-content {
       background-color: #F2F2F2;
       border-bottom: 1px solid #b2d2f1;
     }
+  }
+}
+.topic {
+  background-color: red;
+  text-align: center;
+  color: #fff;
+  img {
+    overflow: hidden;
+    width:100%;
+    height:100%;
   }
 }
 </style>

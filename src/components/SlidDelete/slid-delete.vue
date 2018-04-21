@@ -1,20 +1,20 @@
 <template>
-  <div class="lefdel-wrapper" :style="{
+  <div class="leftdel-wrapper" :style="{
     height: height
   }">
-    <div class="move"
+    <div class="leftdel-move"
     @touchstart="_touchstart"
     @touchmove="_touchmove"
     @touchend="_touchend"
     :style="`transform:translate3d(${disX}px, 0, 0)`">
     <slot></slot>
     </div>
-    <div class="delete" :style="{
+    <div class="leftdel-delete" :style="{
       width: delWidth + 'px'
     }" @click="_delete">
-      <slot name="delete">
-        <span>删除</span>
-      </slot>  
+      <slot name="delete-btn">
+        <div class="leftdel-default-text">删除</div>
+      </slot>
     </div>
   </div>
 </template>
@@ -79,27 +79,29 @@ export default {
 <style lang="scss" rel="stylesheet/scss"  scoped>
   $redFont: #ff3631;
   
-  .lefdel-wrapper {
+  .leftdel-wrapper {
     position: relative;
     width: 100%;
-    .move {
+    .leftdel-move {
       position: absolute;
       width: 100%;
       height: 100%;
       background: #fff;
       z-index: 1;
     }
-    .delete {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: absolute;
-      top: 0;
-      right: 0;
+    .leftdel-delete {
+      float: right;
       height: 100%;
-      background: $redFont;
-      text-align: center;
-      color: #fff;
+      .leftdel-default-text {
+        display: flex;
+        color: #fff;
+        height: 100%;
+        width: 100%;
+        background: $redFont;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+      } 
     }
   }
   
