@@ -65,13 +65,12 @@ h4.title {
   }
 }
 .topic {
-  background-color: red;
+  background-color: #999;
   text-align: center;
   color: #fff;
   img {
-    overflow: hidden;
-    width:100%;
-    height:100%;
+    width: 60px;
+    height: 50px;
   }
 }
 </style>

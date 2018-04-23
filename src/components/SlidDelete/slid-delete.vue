@@ -7,7 +7,7 @@
     @touchmove="_touchmove"
     @touchend="_touchend"
     :style="`transform:translate3d(${disX}px, 0, 0)`">
-    <slot></slot>
+      <slot></slot>
     </div>
     <div class="leftdel-delete" :style="{
       width: delWidth + 'px'
@@ -81,17 +81,19 @@ export default {
   
   .leftdel-wrapper {
     position: relative;
-    width: 100%;
     .leftdel-move {
       position: absolute;
       width: 100%;
       height: 100%;
-      background: #fff;
+      background-color: #fff;
       z-index: 1;
     }
     .leftdel-delete {
-      float: right;
+      position: absolute;
+      right: 0;
+      top: 0;
       height: 100%;
+      overflow: hidden;
       .leftdel-default-text {
         display: flex;
         color: #fff;
