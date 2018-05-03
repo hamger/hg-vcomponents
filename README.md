@@ -44,6 +44,9 @@ npm run dev
 然后在浏览器里输入`http://localhost:8089`，即可看到组件 demo。
 
 ## Changelog
+### 2018.5.3
+> v0.1.7 * 表头固定组件添加 scrollTop 和 top 属性
+
 ### 2018.4.21
 > v0.1.6 * 添加滑动删除组件的删除按钮自定义
 
