@@ -1,5 +1,7 @@
 <template>
-  <div id="hg-fixed-title">
+  <div id="hg-fixed-title" :style="{
+    top: top
+  }">
     <slot></slot>
   </div>
 </template>
@@ -9,6 +11,10 @@ export default {
   name: 'fixed-title',
   props: {
     top: {
+      type: String,
+      default: '0px'
+    },
+    scrollTop: {
       type: Number,
       default: 0
     }
@@ -18,7 +24,7 @@ export default {
     window.addEventListener('scroll', (e) => {
       // 兼容各浏览器，获取屏幕scrollTop
       let scrollTop = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
-      if (scrollTop > this.top) fixedTitle.style.display = 'block';
+      if (scrollTop > this.scrollTop) fixedTitle.style.display = 'block';
       else fixedTitle.style.display = 'none';
     });
   }
@@ -28,7 +34,6 @@ export default {
 #hg-fixed-title {
   display: none;
   position: fixed;
-  top: 0;
   left: 0;
   z-index: 99;
   width: 100%;

@@ -5,7 +5,7 @@
 ```
 <template>
   <div id="list">
-    <fixed-title :top="top">
+    <fixed-title :scrollTop="top">
       <ul>
         <li>
           <p>name</p>
@@ -43,5 +43,6 @@ export default {
 ## Options
 配置项 | 值类型 | 描述
 --- | --- | ---
-top | Number | 固定位置距页面顶部的高度(px)，默认`0`
+top | String | 显示时距离页面顶部的高度，默认`0px`
+scrollTop | Number | 规定页面滚动多少距离(px)时显示表头，默认`0`
 `<slot></slot>` | HTML | 表头内容，必填

@@ -1,7 +1,7 @@
 <template>
   <div id="list">
     <h4>表头固定组件<br>页面置顶组件<br></h4>
-    <fixed-title :top="top">
+    <fixed-title :scrollTop="scrollTop">
       <ul>
         <li>
           <p>name</p>
@@ -27,14 +27,14 @@
 </template>
 
 <script>
-// import { FixedTitle, ToTop } from '@/components';
-import { FixedTitle, ToTop } from 'hg-vcomponents';
+import { FixedTitle, ToTop } from '@/components';
+// import { FixedTitle, ToTop } from 'hg-vcomponents';
 
 export default {
   name: 'el-fixedtitle',
   data () {
     return {
-      top: 0,
+      scrollTop: 0,
       data: [
         {name: 'Hanger', age: 23, sex: 'male'},
         {name: 'Alex', age: 20, sex: 'female'},
@@ -70,7 +70,8 @@ export default {
   methods: {},
   mounted () {
     this.$nextTick(() => {
-      this.top = document.getElementById('listTitle').offsetTop;
+      this.scrollTop = document.getElementById('listTitle').offsetTop;
+      console.log(this.scrollTop);
     });
   }
 };
