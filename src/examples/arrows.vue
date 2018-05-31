@@ -59,7 +59,7 @@
 
 <script>
 import { HollowArrow, SolidArrow } from '@/components';
-// import { HollowArrow, SolidArrow } from 'hg-vcomponents';
+// import { HollowArrow, SolidArrow } from '../../dist/hg-vcomponents.min.js';
 
 export default {
   name: 'el-arrows',

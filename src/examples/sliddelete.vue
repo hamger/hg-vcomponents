@@ -16,7 +16,7 @@
 
 <script>
 import { SlidDelete } from '@/components';
-// import { SlidDelete } from 'hg-vcomponents';
+// import { SlidDelete } from '../../dist/hg-vcomponents.min.js';
 
 export default {
   name: 'el-sliddelete',

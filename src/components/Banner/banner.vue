@@ -1,6 +1,6 @@
 <template>
     <div class="view">
-      <div ref="wrap" class="wrap"
+      <div class="wrap"
         @touchstart="_touchstart"
         @touchmove="_touchmove"
         @touchend="_touchend"
@@ -56,8 +56,9 @@ export default {
     }
   },
   mounted () {
-    this.itemAmount = this.$slots.item.length;
-    this.itemWidth = this.$slots.item[0].elm.offsetWidth;
+    this.$nextTick(() => {
+      this.itemWidth = this.$slots.item[0].elm.clientWidth;
+    });
   }
 };
 </script>

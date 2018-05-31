@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import App from './App';
 import router from './router';
-import 'hg-vcomponents/dist/hg-vcomponents.min.css';
+// import '../dist/hg-vcomponents.min.css';
 
 Vue.config.productionTip = false;
 

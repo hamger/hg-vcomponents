@@ -8,8 +8,8 @@
 </template>
 
 <script>
-// import { Loading } from '@/components';
-import { Loading } from 'hg-vcomponents';
+import { Loading } from '@/components';
+// import { Loading } from '../../dist/hg-vcomponents.min.js';
 
 export default {
   name: 'el-loading',

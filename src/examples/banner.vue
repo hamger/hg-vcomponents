@@ -11,7 +11,7 @@
 
 <script>
 import { Banner } from '@/components';
-// import { Banner } from 'hg-vcomponents';
+// import { Banner } from '../../dist/hg-vcomponents.min.js';
 
 export default {
   name: 'el-banner',
@@ -37,7 +37,7 @@ h4.title {
 
 .item {
   img {
-    height: 150px;
+    height: 190px;
     width: 100%;
   }
 }

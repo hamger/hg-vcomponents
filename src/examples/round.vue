@@ -46,7 +46,7 @@
 
 <script>
 import { Round } from '@/components';
-// import { Round } from 'hg-vcomponents';
+// import { Round } from '../../dist/hg-vcomponents.min.js';
 
 export default {
   name: 'el-round',

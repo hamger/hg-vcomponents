@@ -14,8 +14,8 @@
 </template>
 
 <script>
-// import { ProgressBar } from '@/components';
-import { ProgressBar } from 'hg-vcomponents';
+import { ProgressBar } from '@/components';
+// import { ProgressBar } from '../../dist/hg-vcomponents.min.js';
 
 export default {
   name: 'el-progress-bar',

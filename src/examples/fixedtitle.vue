@@ -28,7 +28,7 @@
 
 <script>
 import { FixedTitle, ToTop } from '@/components';
-// import { FixedTitle, ToTop } from 'hg-vcomponents';
+// import { FixedTitle, ToTop } from '../../dist/hg-vcomponents.min.js';
 
 export default {
   name: 'el-fixedtitle',
