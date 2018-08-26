@@ -20,6 +20,9 @@
 </template>
 
 <script>
+const events = {
+  deteleClicked: 'deteleClicked'
+}
 export default {
   name: 'slid-delete',
   props: {
@@ -70,7 +73,7 @@ export default {
       }
     },
     _delete () {
-      this.$emit('deteleClicked');
+      this.$emit(events.deteleClicked);
     }
   }
 };
