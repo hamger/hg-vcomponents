@@ -3,12 +3,12 @@
   <div>
     <div class='mult-text-input' @click="isInput = true">
       <ul>
-        <li v-for="(item, index) in data" :key="index">
+        <li class='text-li' v-for="(item, index) in data" :key="index">
           {{item}}
           <span @click="delItem(index)" class="remove">×</span>
         </li>
+        <li class='input-li' v-show="isInput"><input @keyup.enter="addItem" type="text" v-model="curText" class="mult-text-input"></li>
       </ul>
-      <input @keyup.enter="addItem" v-show="isInput" type="text" v-model="curText" class="mult-text-input">
     </div>
     <div @click="addItem" class="mult-text-add">+</div>
   </div>
@@ -82,38 +82,46 @@ export default {
         text-overflow: ellipsis;
         white-space: nowrap;
         li {
-          background-color: #e4e4e4;
-          border: 1px solid #aaa;
-          border-radius: 4px;
+          line-height: 31px;
           cursor: pointer;
           float: left;
           margin-right: 5px;
           margin-top: 5px;
-          padding: 0 5px;
           list-style: none;
+          border-radius: 4px;
+        }
+        .text-li {
+          padding: 0 5px;
+          background-color: #f3f2f2;
+          border: 1px solid #aaa;
           .remove {
             cursor: pointer;
           }
         }
-      }
-      input {
-        width: 7em;
-        background: transparent;
-        border: none;
-        // outline: 0;
-        box-shadow: none;
-        -webkit-appearance: textfield;
-        box-sizing: border-box;
-        border: none;
-        font-size: 100%;
-        margin-top: 5px;
-        padding: 0;
+        .input-li {
+          padding: 0;
+          margin-top: 0;
+          input {
+            height: 33px;
+            width: 8em;
+            background: transparent;
+            border: none;
+            outline: 0;
+            box-shadow: none;
+            -webkit-appearance: textfield;
+            box-sizing: border-box;
+            border: none;
+            font-size: 100%;
+            margin-top: 5px;
+            padding: 0;
+          }
+        }
       }
     }
     .mult-text-add {
       cursor: pointer;
       position: absolute;
-      top: 6px;
+      top: 9px;
       right: 0px;
       width: 24px;
       height: 24px;
