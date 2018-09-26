@@ -2,7 +2,7 @@
   <div>
     <h4 class="title">滑动删除组件</h4>
     <ul class="silddelete">
-      <li class="silddelete-li" v-for="item in data" v-if="item.show">
+      <li class="silddelete-li" v-for="(item, index) in data" :key="index" v-if="item.show">
         <slid-delete :height="'50px'" :delWidth="60" @deteleClicked="delCelue(item)">
           <div class="silddelete-content">{{item.content}}</div>
           <div class="topic" slot="delete-btn">

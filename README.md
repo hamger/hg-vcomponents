@@ -35,6 +35,8 @@ import { Loading, SolidArrow... } from 'hg-vcomponents';
 
 [Banner 横幅组件](./src/components/Banner)
 
+[MultTextInput 多项文本输入组件](./src/components/MultTextInput)
+
 ## Demo
 下载该项目，在文件根目录下依次输入命令行：
 ```

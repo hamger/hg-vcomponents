@@ -18,12 +18,6 @@
 
 <script>
 export default {
-  name: 'hint'
-};
-</script>
-
-<script>
-export default {
   name: 'hint',
   props: {
     height: {

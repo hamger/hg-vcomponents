@@ -10,6 +10,7 @@ const ProgressBar = () => import('@/examples/progressbar.vue');
 const Round = () => import('@/examples/round.vue');
 const OmitText = () => import('@/examples/omittext.vue');
 const Banner = () => import('@/examples/banner.vue');
+const MultTextInput = () => import('@/examples/multtextinput.vue');
 
 Vue.use(Router);
 
@@ -64,6 +65,11 @@ export default new Router({
       path: '/banner',
       name: 'banner',
       component: Banner
+    },
+    {
+      path: '/multtextinput',
+      name: 'multtextinput',
+      component: MultTextInput
     }
   ]
 });
