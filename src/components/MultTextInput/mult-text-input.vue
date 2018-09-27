@@ -1,13 +1,15 @@
 <template>
 <div class='mult-text-wrap'>
   <div>
-    <div class='mult-text-input' @click="isInput = true">
+    <div class='mult-text-input' @click="clickInput">
       <ul>
         <li class='text-li' v-for="(item, index) in data" :key="index">
           {{item}}
           <span @click="delItem(index)" class="remove">×</span>
         </li>
-        <li class='input-li' v-show="isInput"><input @keyup.enter="addItem" type="text" v-model="curText" class="mult-text-input"></li>
+        <li class='input-li' v-show="isInput">
+          <input ref="textInput" @keyup.enter="addItem" type="text" v-model="curText" class="mult-text-input">
+        </li>
       </ul>
     </div>
     <div @click="addItem" class="mult-text-add">+</div>
@@ -29,7 +31,7 @@ export default {
   props: {
     data: {
       type: Array,
-      default: []
+      default: [],
     }
   },
   data () {
@@ -39,9 +41,12 @@ export default {
     };
   },
   methods: {
+    clickInput () {
+      this.isInput = true;
+      this.$refs.textInput.focus();
+    },
     delItem (index) {
       this.data.splice(index, 1);
-      return false;
     },
     addItem () {
       if (this.curText.trim() === '') {
@@ -50,6 +55,7 @@ export default {
       }
       this.data.push(this.curText);
       this.curText = '';
+      // this.isInput = false;
     },
     sure2 () {
       this.$emit(events.sure, this.data);
@@ -96,6 +102,7 @@ export default {
           border: 1px solid #aaa;
           .remove {
             cursor: pointer;
+            color: #cacaca;
           }
         }
         .input-li {
