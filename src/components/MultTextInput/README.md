@@ -1,31 +1,41 @@
 ## Introduce
-透明提示组件用于显示的半透明提示框，提示内容可自定义，用函数控制其显示时间。
+多项文本输入组件用于输入多项文本的情况。
 
 ## Usage
 ```
 <template>
   <div>
-    <hint></hint>
+    <mult-text-input :data="demo" @cancel="cancel" @sure="getResult"></mult-text-input>
   </div>
 </template>
 <script>
-import { Hint } from 'hg-vcomponents';
+import { MultTextInput } from '@/components';
+
 export default {
-  ...
-  components: {
-    Hint
+  data () {
+    return {
+      demo: ['red', 'blue', 'yellow']
+    };
   },
-  ...
+  components: {
+    MultTextInput
+  },
+  methods: {
+    getResult (res) {
+      console.log(res);
+    },
+    cancel () {
+      console.log('cancel');
+    }
+  }
 };
 </script>
 ```
-具体使用可参考[该文件](../../examples/hint.vue)。
+具体使用可参考[该文件](../../examples/multtextinput.vue)。
 
 ## Options
 配置项 | 值类型 | 描述
 --- | --- | ---
-height | Number | 提示框高度，默认`108`(px)
-width | Number | 提示框宽度，默认`140`(px)
-bgColor | String | 提示框背景色，默认`rgba(70, 70, 70, 0.5)`
-radius | String | 提示框圆角，默认`6px`
-`<slot></slot>` | HTML | 提示内容，默认为‘修改成功’
+data | Array | 初始显示的数据
+sure | Function | 确定按钮的回调
+cancel | Function | 取消按钮回调
