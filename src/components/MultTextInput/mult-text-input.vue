@@ -73,6 +73,7 @@ export default {
     position: relative;
     margin-bottom: 20px;
     .mult-text-input {
+      height: 43px;
       border-radius: 4px;
       width: calc(100% - 40px);
       overflow: hidden;
@@ -133,7 +134,7 @@ export default {
       width: 24px;
       height: 24px;
       border-radius: 50%;
-      line-height: 22px;
+      line-height: 20px;
       font-size: 18px;
       color: #444;
       border: 1px solid #777;
