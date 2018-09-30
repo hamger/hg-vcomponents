@@ -1,16 +1,14 @@
 <template>
-    <div class="view">
+    <div ref="bannerView" class="banner-view">
       <div class="wrap"
         @touchstart="_touchstart"
         @touchmove="_touchmove"
         @touchend="_touchend"
-        :style="{
-          transform: `translate3d(${disX}px, 0, 0)`
-        }">
+        :style="{transform: `translate3d(${disX}px, 0, 0)`}">
         <slot name="item"></slot>
       </div>
       <ul v-if="showPoint" class="point">
-        <li v-for="(p, index) in new Array(itemAmount)"
+        <li v-for="(p, index) in new Array(itemAmount)" :key="index"
           :style="{'background-color': index === itemIndex ? 'rgba(240, 240, 240, 0.9)' : ''}"></li>
       </ul>
     </div>
@@ -57,14 +55,17 @@ export default {
   },
   mounted () {
     this.$nextTick(() => {
-      this.itemWidth = this.$slots.item[0].elm.clientWidth;
+      this.itemAmount = this.$slots.item.length;
+      this.itemWidth = this.$refs.bannerView.clientWidth;
+      console.log(this.itemAmount);
+      console.log(this.itemWidth);
     });
   }
 };
 </script>
 
 <style lang="scss" rel="stylesheet/scss"  scoped>
-  .view {
+  .banner-view {
     position: relative;
     overflow: hidden;
     font-size: 0;
@@ -74,6 +75,8 @@ export default {
       transition: transform 0.2s ease-out;
       & > div {
         display: inline-block;
+        height: 100%;
+        width: 100%;
       }
     }
     .point {
