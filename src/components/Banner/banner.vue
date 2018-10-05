@@ -56,9 +56,8 @@ export default {
   mounted () {
     this.$nextTick(() => {
       this.itemAmount = this.$slots.item.length;
+      // 获得外部容器的宽度，即子元素的宽度
       this.itemWidth = this.$refs.bannerView.clientWidth;
-      console.log(this.itemAmount);
-      console.log(this.itemWidth);
     });
   }
 };

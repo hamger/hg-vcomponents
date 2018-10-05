@@ -73,14 +73,14 @@ export default {
     position: relative;
     margin-bottom: 20px;
     .mult-text-input {
-      min-height: 35px;
+      min-height: 38px;
       border-radius: 4px;
       width: calc(100% - 40px);
       overflow: hidden;
       border: 1px solid #dcdfe6;
       ul {
         list-style: none;
-        margin: 0 0 0px 0;
+        margin: 0 0 8px 0;
         padding: 0 5px;
         display: inline-block;
         overflow: hidden;
@@ -91,8 +91,8 @@ export default {
           line-height: 31px;
           cursor: pointer;
           float: left;
-          margin-right: 5px;
-          margin-top: 5px;
+          margin-right: 6px;
+          margin-top: 8px;
           list-style: none;
           border-radius: 4px;
           overflow: hidden;
@@ -108,7 +108,6 @@ export default {
         }
         .input-li {
           padding: 0;
-          margin-top: 0;
           input {
             height: 33px;
             width: 8em;
@@ -120,7 +119,6 @@ export default {
             box-sizing: border-box;
             border: none;
             font-size: 100%;
-            margin-top: 5px;
             padding: 0;
           }
         }
