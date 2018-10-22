@@ -24,6 +24,7 @@ export default {
 ## Options
 配置项 | 值类型 | 描述
 --- | --- | ---
+direction | `top`\|`bottom` | 规定显示的箭头方向，默认`top`
 scrollTop | Number | 规定滚动到什么位置时显示按钮，默认`667`(px)
 position | Number | 规定最终定位的位置，默认`0`(px)
 bottom | String | 规定按钮距离底部的位置，默认`20px`

@@ -7,7 +7,8 @@
     right: right
   }">
     <slot>
-      <span class="hg-to-top-arrows"></span>
+      <span v-if="direction === 'top'" class="hg-to-top-arrows"></span>
+      <span v-if="direction === 'bottom'" class="hg-to-bottom-arrows"></span>
     </slot>  
   </div>
 </template>
@@ -19,6 +20,10 @@ export default {
     return {};
   },
   props: {
+    direction: {
+      type: String,
+      default: 'top'
+    },
     position: {
       type: Number,
       default: 0
@@ -80,9 +85,20 @@ export default {
       border-left: 2px solid #fff;
       border-top: 2px solid #fff;
       position: absolute;
-      top: 12px;
-      left: 8px;
+      top: 13px;
+      left: 9px;
       transform: rotate(45deg);
+    }
+    .hg-to-bottom-arrows {
+      display: inline-block;
+      height: 12px;
+      width: 12px;
+      border-left: 2px solid #fff;
+      border-top: 2px solid #fff;
+      position: absolute;
+      top: 7px;
+      left: 9px;
+      transform: rotate(-135deg);
     }
   }
 </style>
