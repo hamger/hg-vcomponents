@@ -9,6 +9,7 @@ import ProgressBar from './ProgressBar/progress-bar.vue';
 import Round from './Round/round.vue';
 import OmitText from './OmitText/omit-text.vue';
 import Banner from './Banner/banner.vue';
+import Gallery from './Gallery/gallery.vue';
 import MultTextInput from './MultTextInput/mult-text-input.vue';
 
 // const SlidDelete = () => import('./SlidDelete/slid-delete.vue');
@@ -35,5 +36,6 @@ export {
   Round,
   OmitText,
   Banner,
+  Gallery,
   MultTextInput
 };

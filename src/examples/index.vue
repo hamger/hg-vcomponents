@@ -10,6 +10,7 @@
     <div class="tab"><router-link to="/progressbar">进度条组件</router-link></div>
     <div class="tab"><router-link to="/omittext">文本省略组件</router-link></div>
     <div class="tab"><router-link to="/banner">横幅组件</router-link></div>
+    <div class="tab"><router-link to="/gallery">画廊组件</router-link></div>
     <div class="tab"><router-link to="/multtextinput">多项文本输入组件</router-link></div>
   </div>
 </template>
